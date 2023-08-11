@@ -1,0 +1,358 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body class="hold-transition dark-mode sidebar-mini ">
+  <div class="wrapper">
+
+    <div class="content-wrapper">
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Student Details</h1>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="sticky-top mb-3">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="">
+                      <table class="table table-responsive table-bordered text-center">
+                        <thead>
+                          <tr>
+                            <th scope="col">ROLL NO.</th>
+                            <th scope="col">NAME </th>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                            <th scope="col">5</th>
+                            <th scope="col">6</th>
+                            <th scope="col">7</th>
+                            <th scope="col">8</th>
+                            <th scope="col">9</th>
+                            <th scope="col">10</th>
+                            <th scope="col">11</th>
+                            <th scope="col">12</th>
+                            <th scope="col">13</th>
+                            <th scope="col">14</th>
+                            <th scope="col">15</th>
+                            <th scope="col">16</th>
+                            <th scope="col">17</th>
+                            <th scope="col">18</th>
+                            <th scope="col">19</th>
+                            <th scope="col">20</th>
+                            <th scope="col">21</th>
+                            <th scope="col">22</th>
+                            <th scope="col">23</th>
+                            <th scope="col">24</th>
+                            <th scope="col">25</th>
+                            <th scope="col">26</th>
+                            <th scope="col">27</th>
+                            <th scope="col">28</th>
+                            <th scope="col">29</th>
+                            <th scope="col">30</th>
+                            <th scope="col">31  </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {% for attendance in attendances   %}
+                          <tr>
+                            
+                            <td>{{attendance.student.rollno}}</td>
+                            <td>{{attendance.student.first_name}} {{attendance.student.last_name}}</td>
+                            <td>{% if attendance.d_1 == -1 %}-{% elif attendance.d_1 == 1 %}P{% else %}A{% endif %}</td>
+                            <td>
+                              {% if attendance.d_2 == -1 %}
+                                -
+                              {% elif attendance.d_2 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_3 == -1 %}
+                                -
+                              {% elif attendance.d_3 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_4 == -1 %}
+                                -
+                              {% elif attendance.d_4 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_5 == -1 %}
+                                -
+                              {% elif attendance.d_5 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_6 == -1 %}
+                                -
+                              {% elif attendance.d_6 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_7 == -1 %}
+                                -
+                              {% elif attendance.d_7 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_8 == -1 %}
+                                -
+                              {% elif attendance.d_8 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_9 == -1 %}
+                                -
+                              {% elif attendance.d_9 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_10 == -1 %}
+                                -
+                              {% elif attendance.d_10 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_11 == -1 %}
+                                -
+                              {% elif attendance.d_11 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_12 == -1 %}
+                                -
+                              {% elif attendance.d_12 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_13 == -1 %}
+                                -
+                              {% elif attendance.d_13 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_14 == -1 %}
+                                -
+                              {% elif attendance.d_14 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_15 == -1 %}
+                                -
+                              {% elif attendance.d_15 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_16 == -1 %}
+                                -
+                              {% elif attendance.d_16 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_17 == -1 %}
+                                -
+                              {% elif attendance.d_17 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_18 == -1 %}
+                                -
+                              {% elif attendance.d_18 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_19 == -1 %}
+                                -
+                              {% elif attendance.d_19 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_20 == -1 %}
+                                -
+                              {% elif attendance.d_20 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_21 == -1 %}
+                                -
+                              {% elif attendance.d_21 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_22 == -1 %}
+                                -
+                              {% elif attendance.d_22 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_23 == -1 %}
+                                -
+                              {% elif attendance.d_23 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_24 == -1 %}
+                                -
+                              {% elif attendance.d_24 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_25 == -1 %}
+                                -
+                              {% elif attendance.d_25 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_26 == -1 %}
+                                -
+                              {% elif attendance.d_26 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_27 == -1 %}
+                                -
+                              {% elif attendance.d_27 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_28 == -1 %}
+                                -
+                              {% elif attendance.d_28 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_29 == -1 %}
+                                -
+                              {% elif attendance.d_29  == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_30 == -1 %}
+                                -
+                              {% elif attendance.d_30 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                            <td>
+                              {% if attendance.d_31 == -1 %}
+                                -
+                              {% elif attendance.d_31 == 1 %}
+                                P
+                              {% else %}
+                                A
+                              {% endif %}
+                            </td>
+                          </tr>
+                            {% endfor %}
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </section>
+    </div>
+
+
+  </div>
+
+</body>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body class="hold-transition dark-mode sidebar-mini ">
+  <div class="wrapper">
+
+    <div class="content-wrapper">
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Student Details</h1>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="sticky-top mb-3">
+                <!-- shrey -->
+
+                <div class="container">
+
+                  <form action="{% url 'student-new' %}" class="col-12" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="d-flex align-items-center">
+                      <div class="col-8">
+                        <div class="d-flex flex-wrap">
+                          <input type="text" class="form-control mr-3 mt-3" id="fname" name="first_name" placeholder="FIRST NAME" style="max-width: 300px;">
+                          <input type="text" class="form-control mt-3" id="lastname" name="last_name" placeholder="LAST NAME" style="max-width: 300px;">
+                        </div>
+                        <div class="d-flex flex-wrap">
+                          <input type="text" class="form-control mt-3 mr-3" id="rollno"
+                          name="rollno" placeholder="ROLL NUMBER" style="max-width: 300px;">
+                          <input type="text" class="form-control mt-3" id="contact"
+                          name="contact" placeholder="CONTACT NUMBER" style="max-width: 400px;">
+                        </div>
+                          <input type="email" class="form-control mt-3" id="email"
+                          name="email" placeholder="EMAIL ADDRESS">
+                          <textarea class="form-control mt-3 " id="address" rows="3"
+                          name="address" placeholder="ADDRESS"></textarea>
+                          <div class="d-flex flex-wrap">
+                          <input type="text" class="form-control mt-3 mr-2" id="city" name="city" placeholder="CITY" style="max-width: 200px;">
+                          <select id="state" class="form-control mt-3 mr-2" name="state" style="max-width: 200px;">
+                            <option selected>State</option>
+                            <option>Gujarat</option>
+                            <option>Maharashtra</option>
+                            <option>Rajasthan</option>
+                            <option>Uttar Pradesh</option>
+                          </select>
+                          <input type="text" class="form-control mt-3" id="pincode" name="pincode" placeholder="PIN CODE" style="max-width: 200px;">
+                        </div>
+  
+                        </div>
+                        
+                        <div class="img-wrap mt-4 col-4 ">
+                          <img src="{% static 'dist/img/dummy_face.jpeg' %}" alt="Student" class="rounded float-end ml-5">
+                          <input type="file" class="form-control-file ml-5 mt-3" id="file" name="photo" required>
+                        </div>
+
+                    </div>
+                      
+                      <div class="btn-wrap mt-4 col-12">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block  col-8">SUBMIT</button>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+                <!--  -->
+              </div>
+            </div>
+      </section>
+    </div>
+
+
+  </div>
+
+</body>
+
+{% endblock %}
+</html>
